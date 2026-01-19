@@ -57,7 +57,7 @@ const Index = () => {
   };
 
   const calendarDays = Array.from({ length: 31 }, (_, i) => i + 1);
-  const firstDayOffset = 4;
+  const firstDayOffset = 5;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#6B5D56] via-[#8B7D76] to-[#A69589] py-12">
