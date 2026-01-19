@@ -65,15 +65,7 @@ const Index = () => {
         
         {/* Hero Card */}
         <Card className="bg-[#2B2320] border-none shadow-2xl rounded-3xl overflow-hidden w-full">
-          <CardContent className="p-8 space-y-6">
-            <div className="text-center space-y-4">
-              <h1 className="text-5xl font-light text-[#E8DDD0] tracking-widest" style={{ fontFamily: 'Cormorant, serif' }}>
-                ЮРИЙ<br />&<br />ЮЛИЯ
-              </h1>
-              <p className="text-2xl text-[#C9B5A0] font-light" style={{ fontFamily: 'Cormorant, serif' }}>
-                06/08/2026
-              </p>
-            </div>
+          <CardContent className="p-0">
             <div className="relative aspect-[3/4] max-w-md mx-auto">
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#2B2320]/80 flex items-end justify-center p-8">
                 <div className="text-center space-y-2">
@@ -81,6 +73,14 @@ const Index = () => {
                   <p className="text-[#C9B5A0] text-xs">Место для вашего фото</p>
                 </div>
               </div>
+            </div>
+            <div className="p-8 pt-6 text-center space-y-4">
+              <h1 className="text-5xl font-light text-[#E8DDD0] tracking-widest" style={{ fontFamily: 'Cormorant, serif' }}>
+                ЮРИЙ<br />&<br />ЮЛИЯ
+              </h1>
+              <p className="text-2xl text-[#C9B5A0] font-light" style={{ fontFamily: 'Cormorant, serif' }}>
+                06/08/2026
+              </p>
             </div>
           </CardContent>
         </Card>
@@ -135,7 +135,7 @@ const Index = () => {
             <div className="space-y-8">
               {/* Gathering */}
               <div className="space-y-3">
-                <div className="flex items-center gap-3">
+                <div className="flex items-center justify-center gap-3">
                   <div className="bg-[#C9B5A0] p-2 rounded-lg">
                     <Icon name="Clock" size={20} className="text-[#2B2320]" />
                   </div>
@@ -153,7 +153,7 @@ const Index = () => {
 
               {/* Ceremony */}
               <div className="space-y-3">
-                <div className="flex items-center gap-3">
+                <div className="flex items-center justify-center gap-3">
                   <div className="bg-[#C9B5A0] p-2 rounded-lg">
                     <Icon name="Heart" size={20} className="text-[#2B2320]" />
                   </div>
@@ -171,7 +171,7 @@ const Index = () => {
 
               {/* Banquet */}
               <div className="space-y-3">
-                <div className="flex items-center gap-3">
+                <div className="flex items-center justify-center gap-3">
                   <div className="bg-[#C9B5A0] p-2 rounded-lg">
                     <Icon name="Utensils" size={20} className="text-[#2B2320]" />
                   </div>
