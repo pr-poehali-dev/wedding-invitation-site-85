@@ -65,7 +65,15 @@ const Index = () => {
         
         {/* Hero Card */}
         <Card className="bg-[#2B2320] border-none shadow-2xl rounded-3xl overflow-hidden w-full">
-          <CardContent className="p-0">
+          <CardContent className="p-8 space-y-6">
+            <div className="text-center space-y-4">
+              <h1 className="text-5xl font-light text-[#E8DDD0] tracking-widest" style={{ fontFamily: 'Cormorant, serif' }}>
+                ЮРИЙ<br />&<br />ЮЛИЯ
+              </h1>
+              <p className="text-2xl text-[#C9B5A0] font-light" style={{ fontFamily: 'Cormorant, serif' }}>
+                06/08/2026
+              </p>
+            </div>
             <div className="relative aspect-[3/4] max-w-md mx-auto">
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#2B2320]/80 flex items-end justify-center p-8">
                 <div className="text-center space-y-2">
@@ -73,14 +81,6 @@ const Index = () => {
                   <p className="text-[#C9B5A0] text-xs">Место для вашего фото</p>
                 </div>
               </div>
-            </div>
-            <div className="p-8 text-center space-y-4">
-              <h1 className="text-5xl font-light text-[#E8DDD0] tracking-widest" style={{ fontFamily: 'Cormorant, serif' }}>
-                ЮРИЙ<br />&<br />ЮЛИЯ
-              </h1>
-              <p className="text-2xl text-[#C9B5A0] font-light" style={{ fontFamily: 'Cormorant, serif' }}>
-                06/08/2026
-              </p>
             </div>
           </CardContent>
         </Card>
@@ -117,7 +117,7 @@ const Index = () => {
                 >
                   {day}
                   {day === 6 && (
-                    <Icon name="Heart" size={24} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fill-red-400/30 text-red-400/30" />
+                    <Icon name="Heart" size={36} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fill-red-400/30 text-red-400/30" />
                   )}
                 </div>
               ))}
