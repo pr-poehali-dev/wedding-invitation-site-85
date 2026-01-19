@@ -115,11 +115,11 @@ const Index = () => {
               {calendarDays.map((day) => (
                 <div
                   key={day}
-                  className="text-center py-3 text-sm rounded-lg relative text-[#5C4F47] hover:bg-[#F5EDE0] transition-all"
+                  className={`text-center py-3 text-sm rounded-lg relative hover:bg-[#F5EDE0] transition-all ${day === 6 ? 'text-white' : 'text-[#5C4F47]'}`}
                 >
-                  {day}
+                  <span className="relative z-10">{day}</span>
                   {day === 6 && (
-                    <Icon name="Heart" size={36} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fill-[#4A3832]/50 text-[#4A3832]/50" />
+                    <Icon name="Heart" size={36} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fill-[#5f4947] text-[#5f4947]" />
                   )}
                 </div>
               ))}
