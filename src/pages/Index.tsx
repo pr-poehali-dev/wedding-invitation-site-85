@@ -61,10 +61,10 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#6B5D56] via-[#8B7D76] to-[#A69589] py-12">
-      <div className="max-w-2xl mx-auto px-4 space-y-6">
+      <div className="max-w-4xl mx-auto px-4 space-y-6">
         
         {/* Hero Card */}
-        <Card className="bg-[#2B2320] border-none shadow-2xl rounded-3xl overflow-hidden">
+        <Card className="bg-[#2B2320] border-none shadow-2xl rounded-3xl overflow-hidden w-full">
           <CardContent className="p-0">
             <div className="relative aspect-[3/4] max-w-md mx-auto">
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#2B2320]/80 flex items-end justify-center p-8">
@@ -86,7 +86,7 @@ const Index = () => {
         </Card>
 
         {/* Welcome Card */}
-        <Card className="bg-white border-none shadow-xl rounded-3xl">
+        <Card className="bg-white border-none shadow-xl rounded-3xl w-full">
           <CardContent className="p-8 space-y-6">
             <h2 className="text-3xl font-light text-[#2B2320] text-center tracking-wider" style={{ fontFamily: 'Cormorant, serif' }}>
               ДОРОГИЕ ГОСТИ!
@@ -101,7 +101,7 @@ const Index = () => {
                 АВГУСТ 2026
               </p>
             </div>
-            <div className="grid grid-cols-7 gap-2 max-w-sm mx-auto">
+            <div className="grid grid-cols-7 gap-3 max-w-lg mx-auto">
               {['ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС'].map((day) => (
                 <div key={day} className="text-center text-xs font-medium text-[#5C4F47] py-2">
                   {day}
@@ -113,11 +113,11 @@ const Index = () => {
               {calendarDays.map((day) => (
                 <div
                   key={day}
-                  className="text-center py-2 text-sm rounded-lg relative text-[#5C4F47] hover:bg-[#F5EDE0] transition-all"
+                  className="text-center py-3 text-sm rounded-lg relative text-[#5C4F47] hover:bg-[#F5EDE0] transition-all"
                 >
                   {day}
                   {day === 6 && (
-                    <Icon name="Heart" size={14} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fill-red-400/30 text-red-400/30" />
+                    <Icon name="Heart" size={24} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fill-red-400/30 text-red-400/30" />
                   )}
                 </div>
               ))}
@@ -125,13 +125,15 @@ const Index = () => {
           </CardContent>
         </Card>
 
-        {/* Timeline Card - Gathering */}
-        <Card className="bg-[#4A3832] border-none shadow-xl rounded-3xl">
-          <CardContent className="p-6 space-y-4">
+        {/* Timeline Card - Combined */}
+        <Card className="bg-[#4A3832] border-none shadow-xl rounded-3xl w-full">
+          <CardContent className="p-8 space-y-8">
             <h3 className="text-2xl font-light text-[#E8DDD0] tracking-wider text-center" style={{ fontFamily: 'Cormorant, serif' }}>
               TIMING OF THE DAY
             </h3>
-            <div className="space-y-6 pt-4">
+            
+            <div className="space-y-8">
+              {/* Gathering */}
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <div className="bg-[#C9B5A0] p-2 rounded-lg">
@@ -148,56 +150,48 @@ const Index = () => {
                   Время пролетит незаметно за игристым на фуршете и общением с другими гостями
                 </p>
               </div>
-            </div>
-          </CardContent>
-        </Card>
 
-        {/* Timeline Card - Ceremony */}
-        <Card className="bg-[#4A3832] border-none shadow-xl rounded-3xl">
-          <CardContent className="p-6 space-y-4">
-            <div className="space-y-3">
-              <div className="flex items-center gap-3">
-                <div className="bg-[#C9B5A0] p-2 rounded-lg">
-                  <Icon name="Heart" size={20} className="text-[#2B2320]" />
+              {/* Ceremony */}
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="bg-[#C9B5A0] p-2 rounded-lg">
+                    <Icon name="Heart" size={20} className="text-[#2B2320]" />
+                  </div>
+                  <h4 className="text-lg text-[#E8DDD0] font-light" style={{ fontFamily: 'Cormorant, serif' }}>
+                    18:30 - ЦЕРЕМОНИЯ
+                  </h4>
                 </div>
-                <h4 className="text-lg text-[#E8DDD0] font-light" style={{ fontFamily: 'Cormorant, serif' }}>
-                  18:30 - ЦЕРЕМОНИЯ
-                </h4>
+                <div className="aspect-video bg-gradient-to-br from-[#6B5D56] to-[#4A3832] rounded-xl flex items-center justify-center">
+                  <Icon name="Heart" size={40} className="text-[#C9B5A0] opacity-30" />
+                </div>
+                <p className="text-sm text-[#C9B5A0]" style={{ fontFamily: 'Open Sans, sans-serif' }}>
+                  Вы станете свидетелями трогательного момента, приготовьте носовые платочки
+                </p>
               </div>
-              <div className="aspect-video bg-gradient-to-br from-[#6B5D56] to-[#4A3832] rounded-xl flex items-center justify-center">
-                <Icon name="Heart" size={40} className="text-[#C9B5A0] opacity-30" />
-              </div>
-              <p className="text-sm text-[#C9B5A0]" style={{ fontFamily: 'Open Sans, sans-serif' }}>
-                Вы станете свидетелями трогательного момента, приготовьте носовые платочки
-              </p>
-            </div>
-          </CardContent>
-        </Card>
 
-        {/* Timeline Card - Banquet */}
-        <Card className="bg-[#4A3832] border-none shadow-xl rounded-3xl">
-          <CardContent className="p-6 space-y-4">
-            <div className="space-y-3">
-              <div className="flex items-center gap-3">
-                <div className="bg-[#C9B5A0] p-2 rounded-lg">
-                  <Icon name="Utensils" size={20} className="text-[#2B2320]" />
+              {/* Banquet */}
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="bg-[#C9B5A0] p-2 rounded-lg">
+                    <Icon name="Utensils" size={20} className="text-[#2B2320]" />
+                  </div>
+                  <h4 className="text-lg text-[#E8DDD0] font-light" style={{ fontFamily: 'Cormorant, serif' }}>
+                    19:00-01:00 - БАНКЕТ
+                  </h4>
                 </div>
-                <h4 className="text-lg text-[#E8DDD0] font-light" style={{ fontFamily: 'Cormorant, serif' }}>
-                  19:00-01:00 - БАНКЕТ
-                </h4>
+                <div className="aspect-video bg-gradient-to-br from-[#6B5D56] to-[#4A3832] rounded-xl flex items-center justify-center">
+                  <Icon name="Sparkles" size={40} className="text-[#C9B5A0] opacity-30" />
+                </div>
+                <p className="text-sm text-[#C9B5A0]" style={{ fontFamily: 'Open Sans, sans-serif' }}>
+                  Время вкусной еды, танцев и развлечений
+                </p>
               </div>
-              <div className="aspect-video bg-gradient-to-br from-[#6B5D56] to-[#4A3832] rounded-xl flex items-center justify-center">
-                <Icon name="Sparkles" size={40} className="text-[#C9B5A0] opacity-30" />
-              </div>
-              <p className="text-sm text-[#C9B5A0]" style={{ fontFamily: 'Open Sans, sans-serif' }}>
-                Время вкусной еды, танцев и развлечений
-              </p>
             </div>
           </CardContent>
         </Card>
 
         {/* Location Card */}
-        <Card className="bg-white border-none shadow-xl rounded-3xl">
+        <Card className="bg-white border-none shadow-xl rounded-3xl w-full">
           <CardContent className="p-8 space-y-6">
             <h2 className="text-3xl font-light text-[#2B2320] text-center tracking-wider" style={{ fontFamily: 'Cormorant, serif' }}>
               LOCATION
@@ -223,7 +217,7 @@ const Index = () => {
         </Card>
 
         {/* Dress Code Card */}
-        <Card className="bg-white border-none shadow-xl rounded-3xl">
+        <Card className="bg-white border-none shadow-xl rounded-3xl w-full">
           <CardContent className="p-8 space-y-6">
             <h2 className="text-3xl font-light text-[#2B2320] text-center tracking-wider" style={{ fontFamily: 'Cormorant, serif' }}>
               DRESS CODE
@@ -231,25 +225,13 @@ const Index = () => {
             <p className="text-sm text-[#5C4F47] text-center leading-relaxed" style={{ fontFamily: 'Open Sans, sans-serif' }}>
               Нам будет приятно, если Вы поддержите стилистику нашей свадьбы и используете в своих нарядах предложенные цвета
             </p>
-            <div className="grid grid-cols-4 gap-4 py-4">
-              <div className="text-center space-y-2">
-                <div className="w-14 h-14 rounded-full bg-[#1A1614] shadow-lg mx-auto" />
-                <p className="text-xs text-[#5C4F47]">Черный</p>
-              </div>
-              <div className="text-center space-y-2">
-                <div className="w-14 h-14 rounded-full bg-[#4A3832] shadow-lg mx-auto" />
-                <p className="text-xs text-[#5C4F47]">Коричневый</p>
-              </div>
-              <div className="text-center space-y-2">
-                <div className="w-14 h-14 rounded-full bg-[#C9B5A0] shadow-lg mx-auto" />
-                <p className="text-xs text-[#5C4F47]">Бежевый</p>
-              </div>
-              <div className="text-center space-y-2">
-                <div className="w-14 h-14 rounded-full bg-[#E8DDD0] shadow-lg mx-auto border-2 border-[#C9B5A0]" />
-                <p className="text-xs text-[#5C4F47]">Кремовый</p>
-              </div>
+            <div className="flex justify-center gap-6 py-6">
+              <div className="w-16 h-16 rounded-full bg-[#1A1614] shadow-lg" />
+              <div className="w-16 h-16 rounded-full bg-[#4A3832] shadow-lg" />
+              <div className="w-16 h-16 rounded-full bg-[#C9B5A0] shadow-lg" />
+              <div className="w-16 h-16 rounded-full bg-[#E8DDD0] shadow-lg border-2 border-[#C9B5A0]" />
             </div>
-            <div className="grid grid-cols-3 gap-2 pt-4">
+            <div className="grid grid-cols-3 gap-3 pt-4">
               <div className="aspect-[3/4] bg-gradient-to-br from-[#E8DDD0] to-[#C9B5A0] rounded-xl" />
               <div className="aspect-[3/4] bg-gradient-to-br from-[#C9B5A0] to-[#8B7D76] rounded-xl" />
               <div className="aspect-[3/4] bg-gradient-to-br from-[#8B7D76] to-[#6B5D56] rounded-xl" />
@@ -258,7 +240,7 @@ const Index = () => {
         </Card>
 
         {/* RSVP Form Card */}
-        <Card className="bg-white border-none shadow-xl rounded-3xl">
+        <Card className="bg-white border-none shadow-xl rounded-3xl w-full">
           <CardContent className="p-8 space-y-6">
             <h2 className="text-3xl font-light text-[#2B2320] text-center tracking-wider" style={{ fontFamily: 'Cormorant, serif' }}>
               DETAILS
@@ -344,7 +326,7 @@ const Index = () => {
         </Card>
 
         {/* Countdown Card */}
-        <Card className="bg-[#4A3832] border-none shadow-xl rounded-3xl">
+        <Card className="bg-[#4A3832] border-none shadow-xl rounded-3xl w-full">
           <CardContent className="p-8 space-y-6">
             <div className="text-center space-y-4">
               <h2 className="text-3xl font-light text-[#E8DDD0] tracking-wider" style={{ fontFamily: 'Cormorant, serif' }}>
