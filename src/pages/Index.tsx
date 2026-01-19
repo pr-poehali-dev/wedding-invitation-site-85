@@ -117,7 +117,7 @@ const Index = () => {
                 >
                   {day}
                   {day === 6 && (
-                    <Icon name="Heart" size={36} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fill-red-400/30 text-red-400/30" />
+                    <Icon name="Heart" size={36} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fill-[#2B2320]/40 text-[#2B2320]/40" />
                   )}
                 </div>
               ))}
